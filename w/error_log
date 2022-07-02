@@ -1,0 +1,50 @@
+[08-Apr-2022 13:33:47 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[08-Apr-2022 13:33:58 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[08-Apr-2022 13:47:13 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[08-Apr-2022 23:16:11 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[09-Apr-2022 07:27:24 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[09-Apr-2022 11:32:47 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[10-Apr-2022 13:43:20 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[11-Apr-2022 08:30:28 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[12-Apr-2022 12:13:41 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:36:38 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:37:08 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:38:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:41:22 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:41:44 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:44:20 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:54:19 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[13-Apr-2022 23:58:31 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 00:03:20 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 00:09:41 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 00:15:19 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 00:18:36 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 01:05:09 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 01:22:58 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[14-Apr-2022 21:14:59 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[16-Apr-2022 19:28:37 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/republ23/public_html/santrimart/w/inc/koneksi.php on line 7
+[30-May-2022 21:36:29 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/republ23/public_html/santrimart/w/index.php:2
+Stack trace:
+#0 /home/republ23/public_html/santrimart/w/index.php(2): mysqli_fetch_array()
+#1 {main}
+  thrown in /home/republ23/public_html/santrimart/w/index.php on line 2
+[30-May-2022 21:36:56 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/republ23/public_html/santrimart/w/index.php:2
+Stack trace:
+#0 /home/republ23/public_html/santrimart/w/index.php(2): mysqli_fetch_array()
+#1 {main}
+  thrown in /home/republ23/public_html/santrimart/w/index.php on line 2
+[30-May-2022 21:37:11 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/republ23/public_html/santrimart/w/index.php:2
+Stack trace:
+#0 /home/republ23/public_html/santrimart/w/index.php(2): mysqli_fetch_array()
+#1 {main}
+  thrown in /home/republ23/public_html/santrimart/w/index.php on line 2
+[30-May-2022 21:37:18 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/republ23/public_html/santrimart/w/index.php:2
+Stack trace:
+#0 /home/republ23/public_html/santrimart/w/index.php(2): mysqli_fetch_array()
+#1 {main}
+  thrown in /home/republ23/public_html/santrimart/w/index.php on line 2
+[30-May-2022 21:38:25 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/republ23/public_html/santrimart/w/index.php:2
+Stack trace:
+#0 /home/republ23/public_html/santrimart/w/index.php(2): mysqli_fetch_array()
+#1 {main}
+  thrown in /home/republ23/public_html/santrimart/w/index.php on line 2
