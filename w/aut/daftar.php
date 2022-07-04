@@ -89,75 +89,94 @@ $toko		 	= $a['nm_toko'];
                                           <div class="tab-pane" id="home-center" aria-labelledby="home-tab-center" role="tabpanel">
                                             <div class="card-body pt-0">
                                               <p class="font-small-1 text-bold-700 text-danger text-right">Halaman pendaftaran penyedia layanan/ penjual</p>
-                                              <form action="aksi_daftar.php" method="POST">
-                                                <input type="hidden" name="akses" value="merchant">
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="nama" placeholder="Nama" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-user"></i>
-                                                    </div>
-                                                    <label for="user-name">Nama</label>
-                                                </fieldset>
-                                                  
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-mail"></i>
-                                                    </div>
-                                                    <label for="user-name">Email</label>
-                                                </fieldset>
+                                                <form action="aksi_daftar.php" method="POST">
+                                                    <input type="hidden" name="akses" value="merchant">
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="nama" placeholder="Nama" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-user"></i>
+                                                        </div>
+                                                        <label for="user-name">Nama</label>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-mail"></i>
+                                                        </div>
+                                                        <label for="user-name">Email</label>
+                                                    </fieldset>
 
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-home"></i>
-                                                    </div>
-                                                    <label for="user-name">Alamat</label>
-                                                </fieldset> 
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-home"></i>
+                                                        </div>
+                                                        <label for="user-name">Alamat</label>
+                                                    </fieldset> 
 
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="no_tlv" placeholder="No. Telepon" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-phone"></i>
-                                                    </div>
-                                                    <label for="user-name">No. Telepon</label>
-                                                </fieldset>                                         
-                                                                                                
-                                                <fieldset class="form-label-group position-relative has-icon-left">
-                                                    <input type="password" class="form-control" name="pass" placeholder="Password" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-lock"></i>
-                                                    </div>
-                                                    <label for="user-password">Password</label>
-                                                </fieldset>
-                                                  
-                                                <fieldset class="form-label-group position-relative has-icon-left">
-                                                    <input type="password" class="form-control" name="pass1" placeholder="Ketik Ulang Password" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-lock"></i>
-                                                    </div>
-                                                    <label for="user-password">Ketik Ulang Password</label>
-                                                </fieldset>
-                                                  
-                                                 
-                                                <div class="form-group row">
-                                                    <div class="col-12">
-                                                        <fieldset class="checkbox">
-                                                            <div class="vs-checkbox-con vs-checkbox-primary">
-                                                                <input type="checkbox" checked name="validasi">
-                                                                <span class="vs-checkbox">
-                                                                    <span class="vs-checkbox--check">
-                                                                        <i class="vs-icon feather icon-check"></i>
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="no_tlv" placeholder="No. Telepon" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-phone"></i>
+                                                        </div>
+                                                        <label for="user-name">No. Telepon</label>
+                                                    </fieldset>                                         
+                                                                                                    
+                                                    <fieldset class="form-label-group position-relative has-icon-left">
+                                                        <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-lock"></i>
+                                                        </div>
+                                                        <label for="user-password">Password</label>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset class="form-label-group position-relative has-icon-left">
+                                                        <input type="password" class="form-control" name="pass1" placeholder="Ketik Ulang Password" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-lock"></i>
+                                                        </div>
+                                                        <label for="user-password">Ketik Ulang Password</label>
+                                                    </fieldset>
+                                                    
+                                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-12">
+                                                            <fieldset class="checkbox">
+                                                                <div class="vs-checkbox-con vs-checkbox-primary">
+                                                                    <input type="checkbox" checked name="validasi">
+                                                                    <span class="vs-checkbox">
+                                                                        <span class="vs-checkbox--check">
+                                                                            <i class="vs-icon feather icon-check"></i>
+                                                                        </span>
                                                                     </span>
-                                                                </span>
-                                                                <span class="font-small-2"> Saya setuju dengan seluruh kebijakkan <?php echo $a['nm_toko'];?>.</span>
-                                                            </div>
-                                                        </fieldset>
+                                                                    <span class="font-small-2"> Saya setuju dengan seluruh kebijakkan <?php echo $a['nm_toko'];?>.</span>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
                                                     </div>
+                                                    <a href="login.php" class="btn btn-outline-primary float-left btn-inline mb-50">Masuk</a>
+                                                    <button type="submit" name="daftar-merchant" class="btn btn-primary float-right btn-inline mb-50" id="type-success">Daftar</button>
+                                                </form>
+                                            </div>
+
+                                            <!-- Google & Facebook -->
+                                            <div class="divider mt-3">
+                                                <div class="divider-text mb-1">
+                                                    <h5 class="text-uppercase border-info p-1">Atau</h3>
                                                 </div>
-                                                <a href="login.php" class="btn btn-outline-primary float-left btn-inline mb-50">Masuk</a>
-                                                <button type="submit" name="daftar-merchant" class="btn btn-primary float-right btn-inline mb-50" id="type-success">Daftar</button>
-                                              </form>
+                                                <div class="mb-1">
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                                        Masuk dengan Google
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                        Masuk dengan Facebook
+                                                    </button>
+                                                </div>
                                             </div>
                                           </div>
 
@@ -165,76 +184,95 @@ $toko		 	= $a['nm_toko'];
                                           <div class="tab-pane active" id="service-center" aria-labelledby="service-tab-center" role="tabpanel">
                                           
                                             <div class="card-body pt-0">
-                                              <p class="font-small-1 text-bold-700 text-danger text-right">Halaman pendaftaran pengguna</p>
-                                              <form action="aksi_daftar.php" method="POST">
-                                                <input type="hidden" name="akses" value="member">
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="nama" placeholder="Nama Anda" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-user"></i>
-                                                    </div>
-                                                    <label for="user-name">Nama Anda</label>
-                                                </fieldset>
-                                                
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="email" class="form-control" name="email" placeholder="Email Anda" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-mail"></i>
-                                                    </div>
-                                                    <label for="user-name">Email Anda</label>
-                                                </fieldset>                                                
-                                                                
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-home"></i>
-                                                    </div>
-                                                    <label for="user-name">Alamat</label>
-                                                </fieldset> 
+                                                <p class="font-small-1 text-bold-700 text-danger text-right">Halaman pendaftaran pengguna</p>
+                                                <form action="aksi_daftar.php" method="POST">
+                                                    <input type="hidden" name="akses" value="member">
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="nama" placeholder="Nama Anda" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-user"></i>
+                                                        </div>
+                                                        <label for="user-name">Nama Anda</label>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="email" class="form-control" name="email" placeholder="Email Anda" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-mail"></i>
+                                                        </div>
+                                                        <label for="user-name">Email Anda</label>
+                                                    </fieldset>                                                
+                                                                    
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="alamat" placeholder="Alamat" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-home"></i>
+                                                        </div>
+                                                        <label for="user-name">Alamat</label>
+                                                    </fieldset> 
 
-                                                <fieldset class="form-label-group form-group position-relative has-icon-left">
-                                                    <input type="text" class="form-control" name="no_tlv" placeholder="No. Telepon" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-phone"></i>
-                                                    </div>
-                                                    <label for="user-name">No. Telepon</label>
-                                                </fieldset>                                    
-                                                                                              
-                                                <fieldset class="form-label-group position-relative has-icon-left">
-                                                    <input type="password" class="form-control" name="pass" placeholder="Password" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-lock"></i>
-                                                    </div>
-                                                    <label for="user-password">Password</label>
-                                                </fieldset>
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
+                                                        <input type="text" class="form-control" name="no_tlv" placeholder="No. Telepon" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-phone"></i>
+                                                        </div>
+                                                        <label for="user-name">No. Telepon</label>
+                                                    </fieldset>                                    
+                                                                                                
+                                                    <fieldset class="form-label-group position-relative has-icon-left">
+                                                        <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-lock"></i>
+                                                        </div>
+                                                        <label for="user-password">Password</label>
+                                                    </fieldset>
+                                                    
+                                                    <fieldset class="form-label-group position-relative has-icon-left">
+                                                        <input type="password" class="form-control" name="pass1" placeholder="Ketik Ulang Password" required>
+                                                        <div class="form-control-position">
+                                                            <i class="feather icon-lock"></i>
+                                                        </div>
+                                                        <label for="user-password">Ketik Ulang Password</label>
+                                                    </fieldset>
+                                                    
                                                 
-                                                <fieldset class="form-label-group position-relative has-icon-left">
-                                                    <input type="password" class="form-control" name="pass1" placeholder="Ketik Ulang Password" required>
-                                                    <div class="form-control-position">
-                                                        <i class="feather icon-lock"></i>
-                                                    </div>
-                                                    <label for="user-password">Ketik Ulang Password</label>
-                                                </fieldset>
-                                                
-                                               
-                                                <div class="form-group row">
-                                                    <div class="col-12">
-                                                        <fieldset class="checkbox">
-                                                            <div class="vs-checkbox-con vs-checkbox-primary">
-                                                                <input type="checkbox" checked name="validasi">
-                                                                <span class="vs-checkbox">
-                                                                    <span class="vs-checkbox--check">
-                                                                        <i class="vs-icon feather icon-check"></i>
+                                                    <div class="form-group row">
+                                                        <div class="col-12">
+                                                            <fieldset class="checkbox">
+                                                                <div class="vs-checkbox-con vs-checkbox-primary">
+                                                                    <input type="checkbox" checked name="validasi">
+                                                                    <span class="vs-checkbox">
+                                                                        <span class="vs-checkbox--check">
+                                                                            <i class="vs-icon feather icon-check"></i>
+                                                                        </span>
                                                                     </span>
-                                                                </span>
-                                                                <span class="font-small-2"> Saya setuju dengan seluruh kebijakkan <?php echo $a['nm_toko'];?>.</span>
-                                                            </div>
-                                                        </fieldset>
+                                                                    <span class="font-small-2"> Saya setuju dengan seluruh kebijakkan <?php echo $a['nm_toko'];?>.</span>
+                                                                </div>
+                                                            </fieldset>
+                                                        </div>
                                                     </div>
+                                                    <a href="login.php" class="btn btn-outline-primary float-left btn-inline mb-50">Masuk</a>
+                                                    <button type="submit" class="btn btn-primary float-right btn-inline mb-50" id="type-success">Daftar</button>
+                                                </form>
+                                            </div>
+                                            
+                                            <!-- Google & Facebook -->
+                                            <div class="divider mt-3">
+                                                <div class="divider-text mb-1">
+                                                    <h5 class="text-uppercase border-info p-1">Atau</h3>
                                                 </div>
-                                                <a href="login.php" class="btn btn-outline-primary float-left btn-inline mb-50">Masuk</a>
-                                                <button type="submit" class="btn btn-primary float-right btn-inline mb-50" id="type-success">Daftar</button>
-                                              </form>
+                                                <div class="mb-1">
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                                        Masuk dengan Google
+                                                    </button>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                        Masuk dengan Facebook
+                                                    </button>
+                                                </div>
                                             </div>
                                           </div>
                                         </div>   

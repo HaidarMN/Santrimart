@@ -116,7 +116,7 @@
         <div class="navbar-header d-xl-block d-none">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item">
-                    <a class="navbar-brand mt-0" href="../">
+                    <a class="navbar-brand mt-0" href="../santrimart">
                         <!-- <span class="float-md-right d-none d-md-block">
                             Santrimart -->
                             <img src="w/img/toko/<?= $a['logo'] ?>" width="50" />
@@ -159,7 +159,7 @@
                                         class="fas fa-user-alt fa-2x"></i></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-lock"></i> Login!</a>
+                                <a class="dropdown-item" href="w/aut/login.php"><i class="fas fa-user-lock"></i> Login!</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register!</a>
                             </div>
                         </li>
@@ -422,12 +422,12 @@
                                     <?php $query = "SELECT * FROM `tabel_barang` INNER JOIN tabel_barang_gambar INNER JOIN tabel_stok_toko WHERE tabel_barang.kd_barang = tabel_barang_gambar.id_brg AND tabel_barang.kd_barang = tabel_stok_toko.kd_barang";
                                     $result = mysqli_query($koneksi, $query);
                                     while ($produk = mysqli_fetch_array($result)) {
-                                        $gambars = $produk['gambar'];
-                                        $gambars = explode(",", $gambars);
-                                        $kdToko = $produk['kd_toko'];
-                                        $stok = $produk['stok'];
-                                        $kd_barang = $produk['kd_barang'];
-                                        $toko = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko WHERE kd_toko = $kdToko"));
+                                        $gambars    = $produk['gambar'];
+                                        $gambars    = explode(",", $gambars);
+                                        $kdToko     = $produk['kd_toko'];
+                                        $stok       = $produk['stok'];
+                                        $kd_barang  = $produk['kd_barang'];
+                                        $toko       = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko WHERE kd_toko = $kdToko"));
                                     ?>
                                     <!-- Slides -->
                                     <div class="swiper-slide">

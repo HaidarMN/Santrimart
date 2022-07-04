@@ -1,10 +1,10 @@
 <?php include "../inc/koneksi.php";
-$a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM `tabel_toko` WHERE `kd_toko` = '000'"));
+$a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM `tabel_toko` WHERE `kd_toko` = '123'"));
 $background     = $a['background'];
-$headerfooter     = $a['headerfooter'];
-$tombol             = $a['tombol'];
-$logo             = $a['logo'];
-$toko             = $a['nm_toko'];
+$headerfooter   = $a['headerfooter'];
+$tombol         = $a['tombol'];
+$logo           = $a['logo'];
+$toko           = $a['nm_toko'];
 
 ?>
 <!DOCTYPE html>
@@ -122,6 +122,22 @@ $toko             = $a['nm_toko'];
                                                     <button type="submit"
                                                         class="btn btn-primary float-right btn-inline">Masuk</button>
                                                 </form>
+
+                                                <!-- Google & Facebook -->
+                                                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                                        Masuk dengan Google
+                                                    </button>
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
+                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                        Masuk dengan Facebook
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -153,7 +169,8 @@ $toko             = $a['nm_toko'];
                                                             // print_r($a)
                                                             ?>
                                                         <img class=" mb-0 pb-0 card-img mb-2"
-                                                            src="../img/produk/<?php echo $e[0]; ?>">
+                                                            src="../img/produk/<?php echo $e[0]; ?>"
+                                                            width = "480" height = "480">
                                                         <p class="card-text"> <?php echo $toko; ?></p>
                                                         <hr class="my-0">
                                                         <div class="justify-content-between mt-0">
@@ -269,8 +286,12 @@ $toko             = $a['nm_toko'];
 
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
-
-
+    
+    <!-- Google API -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- https://developers.google.com/identity/sign-in/web -->
+    <!-- https://developers.google.com/identity/sign-in/web/sign-in -->
+    <!-- https://www.youtube.com/watch?v=PctSxrQ3JrI -->
 </body>
 <!-- END: Body-->
 
