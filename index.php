@@ -160,7 +160,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="w/aut/login.php"><i class="fas fa-user-lock"></i> Login!</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register!</a>
+                                <a class="dropdown-item" href="w/aut/daftar.php"><i class="fas fa-user-plus"></i> Register!</a>
                             </div>
                         </li>
                     </ul>
