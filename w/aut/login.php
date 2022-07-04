@@ -7,6 +7,27 @@ $logo           = $a['logo'];
 $toko           = $a['nm_toko'];
 
 ?>
+<?php 
+//start session
+session_start();
+require_once '../inc/config.php';
+
+if (isset($_GET['code'])) {
+   $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+   $client->setAccessToken($token);
+
+   // getting user profile
+   $gauth = new Google_Service_Oauth2($client);
+   $google_info = $gauth->userinfo->get();
+
+   $_SESSION['info'] = [
+      'name' => $google_info->name, 
+      'email' => $google_info->email, 
+      'picture' => $google_info->picture
+   ];
+   header('Location: /google-login');
+}
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -125,11 +146,8 @@ $toko           = $a['nm_toko'];
 
                                                 <!-- Google & Facebook -->
                                                 <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-                                                <div>
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                                                        Masuk dengan Google
-                                                    </button>
+                                                <div class="container">
+                                                    <a href="<?= $client->createAuthUrl()?>" class="btn btn-primary">login with google</a>
                                                 </div>
                                                 <br>
                                                 <div>
