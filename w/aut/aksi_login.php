@@ -27,18 +27,31 @@
 		$_SESSION['kd_toko']	= $data['kd_toko'];
 		$update					= mysqli_query($koneksi, "UPDATE `tabel_member` SET `log` = now() WHERE `id_user` = '$id'");
 
-		echo "<script>alert('Berhasil Login');window.location= '../page/?menu=home';</script>";
+		// echo "<script>alert('Berhasil Login');window.location= '../page/?menu=home';</script>";
+		echo '<script>
+				setTimeout(function() {
+					Swal.fire({
+						icon: "success",
+						tittle: "Berhasil Login",
+						text: "Anda Berhak Mengakses Halaman Beranda",
+					}, function() {
+						window.location = "../page/?menu=home";
+					});
+				}, 1);
+			</script>';
 	}else{
 		// echo "<script>alert('Gagal Login');window.location= 'login.php';</script>";
-		echo "<script>
-				Swal.fire(
-					icon: 'error',
-					tittle: 'Gagal login',
-					text: 'Periksa usernam dan password',
-					footer: 'yy'
-				);
-				window.location = 'login.php';
-			</script>";
+		echo '<script>
+				setTimeout(function() {
+					Swal.fire({
+						icon: "error",
+						tittle: "Gagal login",
+						text: "Periksa username dan password",
+					}, function() {
+						window.location.href = "login.php";
+					});
+				}, 1);
+			</script>';
 	}
 	
 ?>
