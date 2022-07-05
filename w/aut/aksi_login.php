@@ -1,3 +1,9 @@
+<head>
+	<!-- SweetAlert -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
 <?php
 	session_start();
 	include "../inc/koneksi.php";
@@ -23,17 +29,16 @@
 
 		echo "<script>alert('Berhasil Login');window.location= '../page/?menu=home';</script>";
 	}else{
-		echo "<script>alert('Gagal Login');window.location= 'login.php';</script>";
-		// echo 
-		// "<script>
-		// 	Swal.fire(
-		// 		icon: 'error',
-		// 		tittle: 'Gagal login',
-		// 		text: 'Periksa usernam dan password',
-		// 		footer: 'yy'
-		// 	);
-		// 	window.location = 'login.php';
-		// </script>";
+		// echo "<script>alert('Gagal Login');window.location= 'login.php';</script>";
+		echo "<script>
+				Swal.fire(
+					icon: 'error',
+					tittle: 'Gagal login',
+					text: 'Periksa usernam dan password',
+					footer: 'yy'
+				);
+				window.location = 'login.php';
+			</script>";
 	}
 	
 ?>
