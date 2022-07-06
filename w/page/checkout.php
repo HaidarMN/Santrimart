@@ -29,12 +29,6 @@
             $sisa_saldo = $saldo[0] - $pengeluaran[0];
             ?>
 
-
-
-
-
-
-
           <div class="content-body">
               <!-- Form wizard with icon tabs section start -->
               <section id="icon-tabs">
@@ -394,21 +388,7 @@
                                                                                   <span class="vs-radio--circle"></span>
                                                                               </span>
                                                                               <span>
-                                                                                  Credit / Debit / ATM Card
-                                                                              </span>
-                                                                          </div>
-                                                                      </li>
-                                                                      <li>
-                                                                          <div
-                                                                              class="vs-radio-con vs-radio-primary py-25">
-                                                                              <input type="radio" name="vueradio"
-                                                                                  value="">
-                                                                              <span class="vs-radio">
-                                                                                  <span class="vs-radio--border"></span>
-                                                                                  <span class="vs-radio--circle"></span>
-                                                                              </span>
-                                                                              <span>
-                                                                                  Net Banking
+                                                                                  E-Wallets
                                                                               </span>
                                                                           </div>
                                                                       </li>
@@ -423,22 +403,6 @@
                                                                               </span>
                                                                               <span>
                                                                                   Transfer
-                                                                              </span>
-                                                                          </div>
-                                                                      </li>
-                                                                      <li>
-                                                                          <div
-                                                                              class="vs-radio-con vs-radio-primary py-25">
-                                                                              <input type="radio" name="vueradio"
-                                                                                  value="4">
-                                                                              <input type="text" name="getOpt"
-                                                                                  id="getOpt" hidden>
-                                                                              <span class="vs-radio">
-                                                                                  <span class="vs-radio--border"></span>
-                                                                                  <span class="vs-radio--circle"></span>
-                                                                              </span>
-                                                                              <span>
-                                                                                  Cash On Delivery
                                                                               </span>
                                                                           </div>
                                                                       </li>

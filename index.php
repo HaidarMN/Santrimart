@@ -436,7 +436,7 @@
                                                 <div class="card-content">
                                                     <img class="card-img img-fluid"
                                                         src="w/img/produk/<?php echo $gambars[0]; ?>"
-                                                        width = "480" height = "480">
+                                                        style="width:480px !important; height:480px !important">
                                                     <div class="card-img-overlay overflow-hidden">
                                                         <h4 class="card-title mt-0 pt-0">
                                                             <!--<img src="../img/logo.png" class="img-left float-left" width="35">-->
