@@ -29,16 +29,7 @@
 
 		echo "<script>alert('Berhasil Login');window.location= '../page/?menu=home';</script>";
 	}else{
-		// echo "<script>alert('Gagal Login');window.location= 'login.php';</script>";
-		echo "<script>
-				Swal.fire(
-					icon: 'error',
-					tittle: 'Gagal login',
-					text: 'Periksa usernam dan password',
-					footer: 'yy'
-				);
-				window.location = 'login.php';
-			</script>";
+		echo "<script>alert('Gagal Login');window.location= 'login.php';</script>";
 	}
 	
 ?>

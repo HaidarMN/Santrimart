@@ -67,21 +67,16 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                         </ol>
 
-
-
                                         <div class="carousel-inner" role="listbox">
 
+                                            <?php 
+                                                $ketQuery   = "SELECT * FROM tabel_slide WHERE kat_slide = '3' ORDER BY id_slide DESC limit 1";
 
+                                                $executeSat = mysqli_query($koneksi, $ketQuery);
 
-                                            <?php $ketQuery = "SELECT * FROM tabel_slide WHERE kat_slide = '1' ORDER BY id_slide DESC limit 1";
-
-                                            $executeSat = mysqli_query($koneksi, $ketQuery);
-
-                                            while ($m = mysqli_fetch_array($executeSat)) {
+                                                while ($m = mysqli_fetch_array($executeSat)) {
 
                                             ?>
-
-
 
                                             <div class="carousel-item active">
 
@@ -91,19 +86,16 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                             <?php } ?>
 
+                                            <?php 
+                                                $ketQuery   = "SELECT * FROM tabel_slide WHERE kat_slide = '4' ORDER BY id_slide DESC limit 1";
 
+                                                $executeSat = mysqli_query($koneksi, $ketQuery);
 
-                                            <?php $ketQuery = "SELECT * FROM tabel_slide WHERE kat_slide = '1' ORDER BY id_slide DESC limit 1";
+                                                while ($m = mysqli_fetch_array($executeSat)) {
 
-                                            $executeSat = mysqli_query($koneksi, $ketQuery);
-
-                                            while ($m = mysqli_fetch_array($executeSat)) {
-
-                                                // print_r($m['gbr_slide']);
+                                                    // print_r($m['gbr_slide']);
 
                                             ?>
-
-
 
                                             <div class="carousel-item">
 
@@ -112,12 +104,6 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                                             </div>
 
                                             <?php } ?>
-
-
-
-
-
-
 
                                             <a class="carousel-control-prev" href="#carousel-keyboard" role="button"
 
@@ -141,10 +127,6 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                         </div>
 
-
-
-
-
                                         <!-- <div class="profile-img-container rounded pt-2 d-flex align-items-center justify-content-center"
 
                                 style=" background-color: white; ">
@@ -153,21 +135,19 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                 <?php
 
+                                $id             = $user['id_user'];
 
+                                $query          = "SELECT SUM(total_biaya) FROM tabel_pembelian WHERE id_user = $id ";
 
-                                $id = $user['id_user'];
+                                $executeQue     = mysqli_query($koneksi, $query);
 
-                                $query = "SELECT SUM(total_biaya) FROM tabel_pembelian WHERE id_user = $id ";
-
-                                $executeQue = mysqli_query($koneksi, $query);
-
-                                $pengeluaran = mysqli_fetch_array($executeQue);
+                                $pengeluaran    = mysqli_fetch_array($executeQue);
 
                                 // print_r($id);
 
 
 
-                                $ketQuery = "SELECT SUM(jumlah) FROM tabel_saldo WHERE id_user = $id ";
+                                $ketQuery   = "SELECT SUM(jumlah) FROM tabel_saldo WHERE id_user = $id ";
 
                                 $executeSat = mysqli_query($koneksi, $ketQuery);
 
@@ -301,6 +281,8 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                 <p class="btn btn-success">Rp.<?php echo number_format($sisa_saldo, 0, ",", "."); ?></p>
 
+                                <a href="index.php?menu=saldo" class="btn btn-success mb-3">Tambah</a>
+
                             </div>
 
                         </div>
@@ -309,15 +291,25 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                             <div class="card-header">
 
-                                <h4 class="text-bold-700 text-uppercase border-bottom-dark"><i
+                                <h4 class="text-bold-700 text-uppercase">
+                                    
+                                    <i class="fas fa-history"></i> 
+                                    
+                                    History
+                                
+                                </h4>
 
-                                        class="fas fa-history"></i> History</h4>
-
-                                <p class="text-right badge badge-success">Check <i class="fa-solid fa-angle-right"></i>
+                                <p class="text-right badge badge-success">
+                                    
+                                    <a href="" style="text-decoration:none">Check</a> 
+                                    
+                                    <i class="fa-solid fa-angle-right"></i>
 
                                 </p>
 
                             </div>
+
+                            <hr style="margin: 14px">
 
                             <div class="card-body text-center">
 
@@ -369,17 +361,23 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                             <div class="card-header">
 
-                                <h4 class="text-bold-700 text-uppercase border-bottom-dark"><i
+                                <h4 class="text-bold-700 text-uppercase"><i
 
                                         class="fas fa-bullhorn"></i> Promo</h4>
 
-                                <p class="text-right badge badge-success">Check <i class="fa-solid fa-angle-right"></i>
+                                <p class="text-right badge badge-success">
+                                    
+                                    <a href="" style="text-decoration:none">Check</a>  
+                                    
+                                    <i class="fa-solid fa-angle-right"></i>
 
                                 </p>
 
                             </div>
-
-                            <div class="card-body">
+                            
+                            <hr style="margin: 14px">
+                            
+                            <div class="card-body" style="max-height:350px; overflow:auto">
 
                                 <?php $ketQuery = "SELECT * FROM tabel_info,tabel_info_gambar WHERE tabel_info.id_info = tabel_info_gambar.id_info ORDER BY tabel_info.id_info DESC";
 
@@ -388,8 +386,6 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                                 while ($a = mysqli_fetch_array($executeSat)) {
 
                                 ?>
-
-
 
                                 <div class="d-flex justify-content-start align-items-center mb-1">
 
@@ -405,9 +401,13 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                         <hr class="my-1" />
 
-                                        <a href="?menu=read" class="badge badge-danger rounded-0"><i
-
-                                                class="fab fa-readme"></i>...read...</a>
+                                        <a href="?menu=read" class="badge badge-danger rounded-0" style="text-decoration:none">
+                                            
+                                            <i class="fab fa-readme"></i>
+                                            
+                                            ...read...
+                                        
+                                        </a>
 
                                     </div>
 
@@ -417,17 +417,11 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                 <?php } ?>
 
-
-
-
-
                             </div>
 
                         </div>
 
                     </div>
-
-
 
                     <div class="col-lg-9 col-md-12 col-sm-12 col-12">
 
@@ -441,8 +435,6 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                         </div>
 
-
-
                         <!-- centered-slides swiper option-1 start -->
 
                         <section id="component-swiper-centered-slides">
@@ -452,7 +444,7 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                                         <div class="swiper-centered-slides swiper-container">
                                             <div class="swiper-wrapper">
                                                 <?php error_reporting(0);
-                                                $kueri = "SELECT * FROM tabel_kategori_barang";
+                                                $kueri = "SELECT * FROM tabel_kategori_barang ORDER BY nm_kategori";
                                                 $result = mysqli_query($koneksi, $kueri);
                                                 while ($produk = mysqli_fetch_array($result)) {
                                                     $kd_kategori = $produk['kd_kategori'];
@@ -501,7 +493,7 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                             ?><!--------------------------------------------------SCRIPT---------------------------------------->
                                       
-                               <div class="col-lg-4 col-md-6 col-sm-12 col-6">
+                               <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                                  <a href="index.php?menu=detail&kd_barang=<?php echo $produk['kd_barang']; ?>">
                                    <div class="swiper-slide rounded swiper-shadow">
                                      <div class="card border-0">
@@ -509,7 +501,8 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                                         <input type="hidden" name="id_user" id="id_user" value="<?= $_SESSION['id_user'] ?>"
                                         <input type="hidden" name="kd_barang" id="kd_barang" value="<?= $kd_barang ?> ">
                                         <input type="hidden" name="kd_toko" id="kd_toko" value="<?= $toko['kd_toko'] ?> ">
-                                        <img class="card-img img-fluid" src="../img/produk/<?php echo $gambars[0]; ?>" style="max-height:150px">
+                                        <img class="card-img img-fluid" src="../img/produk/<?php echo $gambars[0]; ?>" 
+                                            style="width:480px !important; height: 480px !important">
  											<div class="card-img-overlay overflow-hidden">
                                                <h4 class="card-title mt-0 pt-0">
                                                  <!--<img src="../img/logo.png" class="img-left float-left" width="35">-->

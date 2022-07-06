@@ -66,8 +66,14 @@
                     <div class="row mt-1">
                         <div class="col-sm-12">
                             <fieldset class="form-group position-relative">
+                                <!-- <?php
+                                    if (isset($_GET['search'])) {
+                                        $search = $_GET['search'];
+                                        $data   = mysqli_query($koneksi, "SELECT * FROM tabel_barang,tabel_barang_gambar,tabel_stok_toko WHERE tabel_barang.nm_barang like '%'.$cari.'%' AND tabel_barang.kd_barang = tabel_stok_toko.kd_barang AND tabel_barang.kd_kategori = '$kd_kategori'");
+                                    }
+                                ?> -->
                                 <input type="text" class="form-control search-product" id="iconLeft5"
-                                    placeholder="Search here">
+                                    placeholder="Search here" name="search">
                                 <div class="form-control-position">
                                     <i class="feather icon-search"></i>
                                 </div>

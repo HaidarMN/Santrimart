@@ -72,8 +72,8 @@ if (isset($_GET['code'])) {
     <!-- END: Custom CSS-->
 
     <!-- SweetAlert -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
 </head>
 <!-- END: Head-->
@@ -154,14 +154,14 @@ if (isset($_GET['code'])) {
                                                         Masuk dengan Google
                                                     </a>
                                                 </div>
-                                                <div class="d-block">
+                                                <!-- <div class="d-block">
                                                     <a href="#" class="btn btn-primary" style="width:100%">
                                                     <i class="fa-brands fa-facebook-f" style="margin-right:5px"></i>
                                                         Masuk dengan Facebook
                                                     </a>
-                                                </div>
+                                                </div> -->
 
-                                                <button id="click">tes</button>
+                                                <!-- <button id="click">tes</button> -->
                                             </div>
                                         </div>
 
@@ -194,7 +194,7 @@ if (isset($_GET['code'])) {
                                                             ?>
                                                         <img class=" mb-0 pb-0 card-img mb-2"
                                                             src="../img/produk/<?php echo $e[0]; ?>"
-                                                            width = "480" height = "480">
+                                                            style="width:480px !important; height:480px !important;">
                                                         <p class="card-text"> <?php echo $toko; ?></p>
                                                         <hr class="my-0">
                                                         <div class="justify-content-between mt-0">
@@ -315,7 +315,7 @@ if (isset($_GET['code'])) {
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <!-- SweetAlert -->
-    <script>
+    <!-- <script>
         $('#click').click(function() {
             Swal.fire(
                 'Good job!',
@@ -323,7 +323,7 @@ if (isset($_GET['code'])) {
                 'success'
             )
         })
-    </script>
+    </script> -->
 </body>
 <!-- END: Body-->
 

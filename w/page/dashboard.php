@@ -26,12 +26,13 @@
             <div class="row">
 
 
-                <?php $satQuery = "SELECT COUNT(kd_barang) as barang FROM tabel_barang";
+                <?php 
+                $satQuery = "SELECT COUNT(kd_barang) as barang FROM tabel_barang WHERE `kd_merchant` = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($barang = mysqli_fetch_array($executeSat)) {
                 ?>
                 <div class="col-xl-4 col-md-4 col-sm-6 col-12">
-                    <a href="index.php?menu=product" class="text-dark">
+                    <a href="index.php?menu=product" class="text-dark" style="text-decoration:none">
                         <div class="card text-center">
                             <div class="card-content">
                                 <div class="card-body">
@@ -50,13 +51,13 @@
                 <?php  }  ?>
 
                 <?php
-                $satQuery = "SELECT COUNT(total_retur) as total_retur FROM tabel_retur";
+                $satQuery = "SELECT COUNT(total_retur) as total_retur FROM tabel_retur WHERE `id_user` = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($count = mysqli_fetch_array($executeSat)) {
                 ?>
 
                 <div class="col-xl-2 col-md-4 col-sm-6 col-6">
-                    <a href="index.php?menu=retur" class="text-dark">
+                    <a href="index.php?menu=retur" class="text-dark" style="text-decoration:none">
                         <div class="card text-center">
                             <div class="card-content">
                                 <div class="card-body">
@@ -75,7 +76,7 @@
                 <?php } ?>
 
                 <div class="col-xl-2 col-md-4 col-sm-6 col-6">
-                    <a href="index.php?menu=sales" class="text-dark">
+                    <a href="index.php?menu=sales" class="text-dark" style="text-decoration:none">
                         <div class="card text-center">
                             <div class="card-content">
                                 <div class="card-body">
@@ -93,7 +94,7 @@
                 </div>
 
                 <div class="col-xl-2 col-md-4 col-sm-6 col-6">
-                    <a href="index.php?menu=balance" class="text-dark">
+                    <a href="index.php?menu=balance" class="text-dark" style="text-decoration:none">
                         <div class="card text-center">
                             <div class="card-content">
                                 <div class="card-body">
@@ -111,7 +112,7 @@
                 </div>
 
                 <div class="col-xl-2 col-md-4 col-sm-6 col-6">
-                    <a href="index.php?menu=stock" class="text-dark">
+                    <a href="index.php?menu=stock" class="text-dark" style="text-decoration:none">
                         <div class="card text-center">
                             <div class="card-content">
                                 <div class="card-body">
@@ -137,7 +138,7 @@
             while ($count = mysqli_fetch_array($executeSat)) {
             ?>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 col-12">
+                <!-- <div class="col-lg-4 col-sm-6 col-12">
                     <div class="card">
                         <div class="card-header d-flex flex-column align-items-start pb-0">
                             <div class="avatar bg-rgba-primary p-50 m-0">
@@ -153,7 +154,7 @@
                             <div id="line-area-chart-1"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <?php } ?>
 
@@ -165,7 +166,8 @@
 
                 ?>
 
-                <div class="col-lg-4 col-sm-6 col-12">
+                <!-- <div class="col-lg-4 col-sm-6 col-12"> -->
+                <div class="col-lg-6 col-sm-6 col-12">
                     <div class="card">
                         <div class="card-header d-flex flex-column align-items-start pb-0">
                             <div class="avatar bg-rgba-success p-50 m-0">
@@ -191,7 +193,8 @@
                     $countPersen = substr($count[0] / $count[1] * 100, 0, 4);
                 ?>
 
-                <div class="col-lg-4 col-sm-6 col-12">
+                <!-- <div class="col-lg-4 col-sm-6 col-12"> -->
+                <div class="col-lg-6 col-sm-6 col-12">
                     <div class="card">
                         <div class="card-header d-flex flex-column align-items-start pb-0">
                             <div class="avatar bg-rgba-danger p-50 m-0">
