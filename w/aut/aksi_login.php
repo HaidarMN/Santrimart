@@ -34,7 +34,7 @@
 						icon: "success",
 						tittle: "Berhasil Login",
 						text: "Anda Berhak Mengakses Halaman Beranda",
-					}, function() {
+					}).then(function() {
 						window.location = "../page/?menu=home";
 					});
 				}, 1);
@@ -47,8 +47,8 @@
 						icon: "error",
 						tittle: "Gagal login",
 						text: "Periksa username dan password",
-					}, function() {
-						window.location.href = "login.php";
+					}).then(function() {
+						window.location = "login.php";
 					});
 				}, 1);
 			</script>';

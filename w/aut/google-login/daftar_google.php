@@ -14,13 +14,27 @@ require 'function.php';
 
 if (isset($_POST["submit"])) {
     if (register($_POST) > 0) {
-        echo "<script>alert('Berhasil Mendaftar Silahkan Login Kembali');window.location= '../../aut/login.php';</script>";
+        echo '<script>
+				setTimeout(function() {
+					Swal.fire({
+						icon: "success",
+						tittle: "Berhasil Login",
+						text: "Anda Berhak Mengakses Halaman Beranda",
+					}).then(function() {
+						window.location = "../../page/?menu=home";
+					});
+				}, 1);
+			</script>';
     } else {
-        echo "
-            <script>
-                alert('data tidak berhasil di tambahkan!')
-            </script>
-        ";
+        echo '<script>
+				setTimeout(function() {
+					Swal.fire({
+						icon: "error",
+						tittle: "Data Gagal Di Tambahkan",
+						text: "Data Gagal Di Tambahkan Silahkan Coba Kembali",
+					});
+				}, 1);
+			</script>';
     }
 }
 ?>
@@ -177,6 +191,7 @@ if (isset($_POST["submit"])) {
     <script src="../app-assets/js/scripts/extensions/sweet-alerts.js"></script>
     <!-- END: Theme JS-->
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
 

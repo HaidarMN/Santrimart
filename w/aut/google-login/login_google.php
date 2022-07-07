@@ -1,3 +1,8 @@
+<head>
+	<!-- SweetAlert -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 
 <?php
 
@@ -10,21 +15,22 @@ $query = "SELECT * FROM tabel_member WHERE email_user  = '$email'";
 $hasil = mysqli_query($koneksi,$query);
 $data = mysqli_fetch_assoc($hasil);
 
-$hasil_email = $data['email_user'];
+$hasil_email = $data['email_ user'];
+
 if ($hasil_email == null)
 {
-   echo "<script>alert('Login Berhasil Silahkan Lengkapi Data!');window.location= 'daftar_google.php';</script>";
-//    echo '<script>
-//             setTimeout(function() {
-//                 Swal.fire({
-//                     icon: "error",
-//                     tittle: "Gagal login",
-//                     text: "Periksa username dan password",
-//                 }, function() {
-//                     window.location.href = "google_daftar.php";
-//                 });
-//             }, 1);
-//         </script>';
+//    echo "<script>alert('Login Berhasil Silahkan Lengkapi Data!');window.location= 'daftar_google.php';</script>";
+   echo '<script>
+            setTimeout(function() {
+                Swal.fire({
+                    icon: "success",
+                    tittle: "Berhasil Login",
+                    text: "Login Berhasil Silahkan Lengkapi Data!",
+                }).then(function() {
+                    window.location = "daftar_google.php";
+                });
+            }, 1);
+        </script>';
 
 }else{
 
@@ -36,18 +42,18 @@ if ($hasil_email == null)
     $_SESSION['kd_toko']	= $data['kd_toko'];
     $update					= mysqli_query($koneksi, "UPDATE `tabel_member` SET `log` = now() WHERE `id_user` = '$id'");
 
-    echo "<script>alert('Berhasil Login');window.location= '../../page/?menu=home';</script>";
-    // echo '<script>
-    //         setTimeout(function() {
-    //             Swal.fire({
-    //                 icon: "success",
-    //                 tittle: "Berhasil Login",
-    //                 text: "Anda Berhak Mengakses Halaman Beranda",
-    //             }, function() {
-    //                 window.location = "../page/?menu=home";
-    //             });
-    //         }, 1);
-    //     </script>';
+    // echo "<script>alert('Berhasil Login');window.location= '../../page/?menu=home';</script>";
+    echo '<script>
+            setTimeout(function() {
+                Swal.fire({
+                    icon: "success",
+                    tittle: "Berhasil Login",
+                    text: "Berhasil Login",
+                }).then(function() {
+                    window.location = "../../page/?menu=home";
+                });
+            }, 1);
+        </script>';
     
 }
 
