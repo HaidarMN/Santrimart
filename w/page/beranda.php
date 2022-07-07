@@ -301,7 +301,7 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
                                 <p class="text-right badge badge-success">
                                     
-                                    <a href="" style="text-decoration:none">Check</a> 
+                                    <a href="index.php?menu=history" style="text-decoration:none">Check</a> 
                                     
                                     <i class="fa-solid fa-angle-right"></i>
 
