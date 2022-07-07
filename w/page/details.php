@@ -93,10 +93,20 @@
                                 
                                 <div class="row">
                                  <div class="btn-group justify-content-center">
-                                    <a href="#" class="mr-1 text-info"><i class="fab fa-facebook-square fa-2x"></i></a>
-                                    <a href="#" class="mr-1 text-info"><i class="fab fa-twitter-square fa-2x"></i></a>
-                                    <a href="#" class="mr-1 text-info"><i class="fab fa-instagram-square fa-2x"></i></a>
-                                    <a href="#" class="mr-1 text-info"><i class="fab fa-whatsapp-square fa-2x"></i></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://republicvisual.com/" class="mr-1 text-info" target="_blank">
+                                        <i class="fab fa-facebook-square fa-2x"></i>
+                                    </a>
+                                    <a href="http://www.twitter.com/intent/tweet/?url=https://republicvisual.com/" class="mr-1 text-info" target="_blank">
+                                        <i class="fab fa-twitter-square fa-2x"></i>
+                                    </a>
+                                    <!-- <a href="https://www.instagram.com/https://republicvisual.com/" class="mr-1 text-info" target="_blank"> 
+                                    https://developers.facebook.com/docs/instagram -->
+                                    <a href="#" class="mr-1 text-info" target="_blank">
+                                        <i class="fab fa-instagram-square fa-2x"></i>
+                                    </a>
+                                    <a href="whatsapp://send?text=https://republicvisual.com/" class="mr-1 text-info" target="_blank">
+                                        <i class="fab fa-whatsapp-square fa-2x"></i>
+                                    </a>
                                  </div>
                                 </div>
                                 <div class="divider">

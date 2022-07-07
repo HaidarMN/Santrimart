@@ -194,6 +194,9 @@
                                 </div>
                                 <ul class="list-unstyled price-range" id="price-range">
                                     <li>
+                                        <?php
+                                            $ha = mysqli_query($koneksi, "SELECT * FROM `tabel_barang`");
+                                        ?>
                                         <span class="vs-radio-con vs-radio-primary py-25">
                                             <input type="radio" name="price-range" checked value="false">
                                             <span class="vs-radio">
@@ -204,43 +207,55 @@
                                         </span>
                                     </li>
                                     <li>
+                                        <?php
+                                            $h5 = mysqli_query($koneksi, "SELECT * FROM `tabel_barang` WHERE `hrg_jual` <= 50000");
+                                        ?>
                                         <span class="vs-radio-con vs-radio-primary py-25">
                                             <input type="radio" name="price-range" value="false">
                                             <span class="vs-radio">
                                                 <span class="vs-radio--border"></span>
                                                 <span class="vs-radio--circle"></span>
                                             </span>
-                                            <span class="ml-50"> &lt;=$10</span>
+                                            <span class="ml-50"> &lt;=IDR 50.000</span>
                                         </span>
                                     </li>
                                     <li>
+                                        <?php
+                                            $h10 = mysqli_query($koneksi, "SELECT * FROM `tabel_barang` WHERE `hrg_jual` BETWEEN 50000 AND 100000");
+                                        ?>
                                         <span class="vs-radio-con vs-radio-primary py-25">
                                             <input type="radio" name="price-range" value="false">
                                             <span class="vs-radio">
                                                 <span class="vs-radio--border"></span>
                                                 <span class="vs-radio--circle"></span>
                                             </span>
-                                            <span class="ml-50">$10 - $100</span>
+                                            <span class="ml-50">IDR 50.000 - IDR 100.000</span>
                                         </span>
                                     </li>
                                     <li>
+                                        <?php
+                                            $h20 = mysqli_query($koneksi, "SELECT * FROM `tabel_barang` WHERE `hrg_jual` BETWEEN 100000 AND 200000");
+                                        ?>
                                         <span class="vs-radio-con vs-radio-primary py-25">
                                             <input type="radio" name="price-range" value="false">
                                             <span class="vs-radio">
                                                 <span class="vs-radio--border"></span>
                                                 <span class="vs-radio--circle"></span>
                                             </span>
-                                            <span class="ml-50">$100 - $500</span>
+                                            <span class="ml-50">IDR 100.000 - IDR 200.000</span>
                                         </span>
                                     </li>
                                     <li>
+                                        <?php
+                                            $h200 = mysqli_query($koneksi, "SELECT * FROM `tabel_barang` WHERE `hrg_jual` >= 200000");
+                                        ?>
                                         <span class="vs-radio-con vs-radio-primary py-25">
                                             <input type="radio" name="price-range" value="false">
                                             <span class="vs-radio">
                                                 <span class="vs-radio--border"></span>
                                                 <span class="vs-radio--circle"></span>
                                             </span>
-                                            <span class="ml-50">&gt;= $500</span>
+                                            <span class="ml-50">&gt;= IDR 200.000</span>
                                         </span>
                                     </li>
 
