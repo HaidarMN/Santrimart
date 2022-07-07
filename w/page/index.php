@@ -583,6 +583,10 @@ $foto       = $user['foto'];
           
           break;
 
+        case ('history');
+          include('history.php');
+          break;
+
       }
 
     }
