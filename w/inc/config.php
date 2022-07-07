@@ -3,7 +3,7 @@ require_once '../vendor/autoload.php';
 
 $clientID = '964884563069-qvqeu2hepq606g37q19htsu8sgq5sr0u.apps.googleusercontent.com';
 $clientSecret = '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';
-$redirectURI = 'http://localhost/santrimart/Santrimart/w/page/?menu=home';
+$redirectURI = 'https://localhost/santrimart/Santrimart/w/aut/login.php';
 
 
 // CREATE CLIENT REQUEST TO GOOGLE

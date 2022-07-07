@@ -377,7 +377,9 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                             
                             <hr style="margin: 14px">
                             
+
                             <div class="card-body" style="max-height:325px; overflow:auto">
+
 
                                 <?php $ketQuery = "SELECT * FROM tabel_info,tabel_info_gambar WHERE tabel_info.id_info = tabel_info_gambar.id_info ORDER BY tabel_info.id_info DESC";
 
@@ -604,6 +606,20 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
 
 </div>
 
+<style>
+    div.sc::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    div.sc::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    div.sc::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(#56CCF2, #2F80ED);
+        border-radius: 20px;
+    }
+</style>
 
 
 <script type="text/javascript">
@@ -693,19 +709,6 @@ function add_keranjang(stok, kdbarang) {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function pilihKategori(kd_kategori, nm_kategori) {
