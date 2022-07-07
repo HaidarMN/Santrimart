@@ -14,19 +14,19 @@ session_start();
 require_once '../inc/config.php';
 
 if (isset($_GET['code'])) {
-    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-    $client->setAccessToken($token);
+   $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+   $client->setAccessToken($token);
 
-    // getting user profile
-    $gauth = new Google_Service_Oauth2($client);
-    $google_info = $gauth->userinfo->get();
-
-    $_SESSION['info'] = [
-        'name' => $google_info->name, 
-        'email' => $google_info->email, 
-        'picture' => $google_info->picture
-    ];
-    header('Location: /google-login');
+   // getting user profile
+   $gauth = new Google_Service_Oauth2($client);
+   $google_info = $gauth->userinfo->get();
+   
+   $_SESSION['info'] = [
+      'name' => $google_info->name, 
+      'email' => $google_info->email, 
+      'picture' => $google_info->picture
+   ];
+   header('Location: /santrimart/Santrimart/w/aut/google-login/login_google.php');
 }
 ?>
 <!DOCTYPE html>
