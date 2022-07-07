@@ -19,13 +19,13 @@ if (isset($_GET['code'])) {
    // getting user profile
    $gauth = new Google_Service_Oauth2($client);
    $google_info = $gauth->userinfo->get();
-
+   
    $_SESSION['info'] = [
       'name' => $google_info->name, 
       'email' => $google_info->email, 
       'picture' => $google_info->picture
    ];
-   header('Location: /google-login');
+   header('Location: /santrimart/Santrimart/w/aut/google-login/login_google.php');
 }
 ?>
 <!DOCTYPE html>
