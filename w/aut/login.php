@@ -7,6 +7,7 @@ $logo           = $a['logo'];
 $toko           = $a['nm_toko'];
 
 ?>
+
 <?php 
 //start session
 session_start();
@@ -70,6 +71,10 @@ if (isset($_GET['code'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- END: Custom CSS-->
 
+    <!-- SweetAlert -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
 </head>
 <!-- END: Head-->
 
@@ -101,8 +106,7 @@ if (isset($_GET['code'])) {
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <form action="aksi_login.php" method="post">
-                                                    <fieldset
-                                                        class="form-label-group form-group position-relative has-icon-left">
+                                                    <fieldset class="form-label-group form-group position-relative has-icon-left">
                                                         <input type="text" class="form-control" name="nama"
                                                             placeholder="Nama Pengguna" required>
                                                         <div class="form-control-position">
@@ -120,8 +124,7 @@ if (isset($_GET['code'])) {
                                                         </div>
                                                         <label for="user-password">Password</label>
                                                     </fieldset>
-                                                    <div
-                                                        class="form-group d-flex justify-content-between align-items-center">
+                                                    <div class="form-group d-flex justify-content-between align-items-center">
                                                         <div class="text-left">
                                                             <fieldset class="checkbox">
                                                                 <div class="vs-checkbox-con vs-checkbox-primary">
@@ -145,17 +148,20 @@ if (isset($_GET['code'])) {
                                                 </form>
 
                                                 <!-- Google & Facebook -->
-                                                <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-                                                <div class="container">
-                                                    <a href="<?= $client->createAuthUrl()?>" class="btn btn-primary">login with google</a>
+                                                <div class="d-block mb-1">
+                                                    <a href="<?= $client->createAuthUrl()?>" class="btn btn-primary" style="width:100%">
+                                                        <i class="fa-brands fa-google" style="margin-right:5px"></i>
+                                                        Masuk dengan Google
+                                                    </a>
                                                 </div>
-                                                <br>
-                                                <div>
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                <!-- <div class="d-block">
+                                                    <a href="#" class="btn btn-primary" style="width:100%">
+                                                    <i class="fa-brands fa-facebook-f" style="margin-right:5px"></i>
                                                         Masuk dengan Facebook
-                                                    </button>
-                                                </div>
+                                                    </a>
+                                                </div> -->
+
+                                                <!-- <button id="click">tes</button> -->
                                             </div>
                                         </div>
 
@@ -188,7 +194,7 @@ if (isset($_GET['code'])) {
                                                             ?>
                                                         <img class=" mb-0 pb-0 card-img mb-2"
                                                             src="../img/produk/<?php echo $e[0]; ?>"
-                                                            width = "480" height = "480">
+                                                            style="width:480px !important; height:480px !important;">
                                                         <p class="card-text"> <?php echo $toko; ?></p>
                                                         <hr class="my-0">
                                                         <div class="justify-content-between mt-0">
@@ -307,9 +313,17 @@ if (isset($_GET['code'])) {
     
     <!-- Google API -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- https://developers.google.com/identity/sign-in/web -->
-    <!-- https://developers.google.com/identity/sign-in/web/sign-in -->
-    <!-- https://www.youtube.com/watch?v=PctSxrQ3JrI -->
+
+    <!-- SweetAlert -->
+    <!-- <script>
+        $('#click').click(function() {
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
+        })
+    </script> -->
 </body>
 <!-- END: Body-->
 

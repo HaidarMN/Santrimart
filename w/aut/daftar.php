@@ -5,6 +5,28 @@ $tombol		 	= $a['tombol'];
 $logo		 	= $a['logo'];
 $toko		 	= $a['nm_toko'];
 ?>
+
+<?php 
+//start session
+session_start();
+require_once '../inc/config.php';
+
+if (isset($_GET['code'])) {
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+    $client->setAccessToken($token);
+
+    // getting user profile
+    $gauth = new Google_Service_Oauth2($client);
+    $google_info = $gauth->userinfo->get();
+
+    $_SESSION['info'] = [
+        'name' => $google_info->name, 
+        'email' => $google_info->email, 
+        'picture' => $google_info->picture
+    ];
+    header('Location: /google-login');
+}
+?>
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -163,19 +185,19 @@ $toko		 	= $a['nm_toko'];
                                             <!-- Google & Facebook -->
                                             <div class="divider mt-3">
                                                 <div class="divider-text mb-1">
-                                                    <h5 class="text-uppercase border-info p-1">Atau</h3>
+                                                    <h5 class="text-uppercase text-info border-info p-1">Atau</h3>
                                                 </div>
-                                                <div class="mb-1">
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                                <div class="d-block mb-1">
+                                                    <a href="<?= $client->createAuthUrl()?>" class="btn btn-primary" style="width:100%">
+                                                        <i class="fa-brands fa-google" style="margin-right:5px"></i>
                                                         Masuk dengan Google
-                                                    </button>
+                                                    </a>
                                                 </div>
-                                                <div>
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                <div class="d-block">
+                                                    <a href="#" class="btn btn-primary" style="width:100%">
+                                                        <i class="fa-brands fa-facebook-f" style="margin-right:5px"></i>
                                                         Masuk dengan Facebook
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                           </div>
@@ -259,19 +281,19 @@ $toko		 	= $a['nm_toko'];
                                             <!-- Google & Facebook -->
                                             <div class="divider mt-3">
                                                 <div class="divider-text mb-1">
-                                                    <h5 class="text-uppercase border-info p-1">Atau</h3>
+                                                    <h5 class="text-uppercase text-info border-primary p-1">Atau</h3>
                                                 </div>
-                                                <div class="mb-1">
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                                <div class="d-block mb-1">
+                                                    <a href="<?= $client->createAuthUrl()?>" class="btn btn-primary" style="width:100%">
+                                                        <i class="fa-brands fa-google" style="margin-right:5px"></i>
                                                         Masuk dengan Google
-                                                    </button>
+                                                    </a>
                                                 </div>
-                                                <div>
-                                                    <button class="btn btn-outline-primary btn-inline" style="width:100%">
-                                                        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                                                <div class="d-block">
+                                                    <a href="#" class="btn btn-primary" style="width:100%">
+                                                        <i class="fa-brands fa-facebook-f" style="margin-right:5px"></i>
                                                         Masuk dengan Facebook
-                                                    </button>
+                                                    </a>
                                                 </div>
                                             </div>
                                           </div>

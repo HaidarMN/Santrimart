@@ -35,7 +35,7 @@
 
                   <?php $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_member WHERE akses = 'member'")); ?>
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=user&akses=<?php echo $a['akses']; ?>" class="text-dark">
+                      <a href="index.php?menu=user&akses=<?php echo $a['akses']; ?>" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -63,7 +63,7 @@
 
                   <?php $b = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_member WHERE akses = 'merchant'")); ?>
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=user&akses=<?php echo $b['akses']; ?>" class="text-dark">
+                      <a href="index.php?menu=user&akses=<?php echo $b['akses']; ?>" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -90,7 +90,7 @@
                     ?>
 
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=product" class="text-dark">
+                      <a href="index.php?menu=product" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -117,7 +117,7 @@
                     ?>
 
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=info" class="text-dark">
+                      <a href="index.php?menu=info" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -144,7 +144,7 @@
                     ?>
 
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=retur" class="text-dark">
+                      <a href="index.php?menu=retur" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -171,7 +171,7 @@
                     ?>
 
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=sales" class="text-dark">
+                      <a href="index.php?menu=sales" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -199,7 +199,7 @@
                     ?>
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
 
-                      <a href="index.php?menu=balance" class="text-dark">
+                      <a href="index.php?menu=balance" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -227,7 +227,7 @@
                     ?>
 
                   <div class="col-xl-3 col-md-4 col-sm-6 col-6">
-                      <a href="index.php?menu=stock" class="text-dark">
+                      <a href="index.php?menu=stock" class="text-dark s">
                           <div class="card text-center">
                               <div class="card-content">
                                   <div class="card-body">
@@ -316,4 +316,10 @@
       </div>
   </div>
 
-  <!-- END: Content
+  <!-- END: Content -->
+
+  <style>
+    a.s {
+        text-decoration: none;
+    }
+  </style>

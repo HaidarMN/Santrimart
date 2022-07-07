@@ -160,7 +160,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="w/aut/login.php"><i class="fas fa-user-lock"></i> Login!</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i> Register!</a>
+                                <a class="dropdown-item" href="w/aut/daftar.php"><i class="fas fa-user-plus"></i> Register!</a>
                             </div>
                         </li>
                     </ul>
@@ -231,7 +231,9 @@
     <!-- END: Main Menu-->
 
     <?php
-    $ExplodeKonten = explode(",", $a['konten']);
+    $judul  = $a['nm_toko'];
+    $ket    = $a['ket_toko'];
+    $jargon = $a['jargon_toko'];
     // print_r($ExplodeKonten);
     ?>
     <!-- BEGIN: Content-->
@@ -243,22 +245,17 @@
                     <div class="col-lg-3 col-md-12 col-sm-12">
                         <div class="bg-gradient-white p-1" style="height:100%">
                             <!--<h2 class="pt-4 display-4 text-left"><img src="w/img/logo-h.png" width="70%"></h2>-->
-                            <!-- DUMMY DATA -->
-                            <!-- <h2 class="pt-4 display-4 text-left pl-3"><?= $ExplodeKonten[0] ?></h2> -->
-                            <h2 class="pt-4 display-4 text-left px-3">SANTRIMART</h2>
+                            <h2 class="pt-4 display-4 text-left px-3"><?= $judul ?></h2>
                             <p class="text-justify font-medium-2">
                                 <ul class="list-group-flush text-left text-dark px-3">
                                     <li class="list-group-item bg-transparent px-0">
                                         <!-- DUMMY DATA -->
-                                        <!-- <?= $ExplodeKonten[1] ?> -->
-                                        <!-- <strong>santrimart</strong> -->
                                         <!-- <blockquote class="display-4 text-dark" style="font-size:2em">
                                         <?= $ExplodeKonten[2] ?></blockquote> -->
                                         <h4>
-                                            Belanja di santrimart banyak untungnya, dapatkan promo besar-besaran download sekarang
-                                            juga aplikasi 
+                                            <?= $ket ?> 
                                             <strong>santrimart</strong>
-                                            <blockquote style="font-size:40px">Santri kekinian, Santri berwirausaha</blockquote>
+                                            <blockquote style="font-size:40px"><?= $jargon ?></blockquote>
                                         </h4>
                                     </li>
                                 </ul>
@@ -436,7 +433,7 @@
                                                 <div class="card-content">
                                                     <img class="card-img img-fluid"
                                                         src="w/img/produk/<?php echo $gambars[0]; ?>"
-                                                        width = "480" height = "480">
+                                                        style="width:480px !important; height:480px !important">
                                                     <div class="card-img-overlay overflow-hidden">
                                                         <h4 class="card-title mt-0 pt-0">
                                                             <!--<img src="../img/logo.png" class="img-left float-left" width="35">-->
