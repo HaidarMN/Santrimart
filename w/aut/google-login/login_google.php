@@ -15,7 +15,7 @@ $query = "SELECT * FROM tabel_member WHERE email_user  = '$email'";
 $hasil = mysqli_query($koneksi,$query);
 $data = mysqli_fetch_assoc($hasil);
 
-$hasil_email = $data['email_ user'];
+$hasil_email = $data['email_user'];
 
 if ($hasil_email == null)
 {
