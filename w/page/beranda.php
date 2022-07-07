@@ -377,7 +377,7 @@ $a = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM tabel_toko")); ?>
                             
                             <hr style="margin: 14px">
                             
-                            <div class="card-body" style="max-height:350px; overflow:auto">
+                            <div class="card-body" style="max-height:325px; overflow:auto">
 
                                 <?php $ketQuery = "SELECT * FROM tabel_info,tabel_info_gambar WHERE tabel_info.id_info = tabel_info_gambar.id_info ORDER BY tabel_info.id_info DESC";
 
