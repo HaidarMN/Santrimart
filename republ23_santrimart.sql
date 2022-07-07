@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Jul 2022 pada 10.55
+-- Waktu pembuatan: 07 Jul 2022 pada 10.02
 -- Versi server: 10.4.13-MariaDB
 -- Versi PHP: 7.4.8
 
@@ -232,6 +232,13 @@ CREATE TABLE `tabel_comment_barang` (
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `tabel_comment_barang`
+--
+
+INSERT INTO `tabel_comment_barang` (`id`, `id_brg`, `nama`, `comment`, `date`) VALUES
+(1, 0, 'koko', 0x746573, '2022-07-05');
+
 -- --------------------------------------------------------
 
 --
@@ -256,7 +263,8 @@ CREATE TABLE `tabel_info` (
 INSERT INTO `tabel_info` (`id_info`, `kd_kategori_info`, `judul`, `subjudul`, `penulis`, `tanggal`, `informasi`, `suka`) VALUES
 (1, 0, 'Bulan promosi', 'Beli apa aja potong harga', 'admin', '', 'Potong harga dari 5%-50% untuk pembelian dengan kartu member', ''),
 (2, 0, 'Bayar besok', 'Beli sekarang bayar besok', '', '', 'Beli sekarang bayar besok', ''),
-(11, 1, 'ekrhfker', 'ijof efje', 'admin', '2022-02-20 11:00:32', 'Isi disini eheuy', '');
+(11, 1, 'ekrhfker', 'ijof efje', 'admin', '2022-02-20 11:00:32', 'Isi disini eheuy', ''),
+(12, 1, 'qwerty', 'zxcvbn', 'admin', '', '...', '');
 
 -- --------------------------------------------------------
 
@@ -278,7 +286,8 @@ CREATE TABLE `tabel_info_gambar` (
 INSERT INTO `tabel_info_gambar` (`id_gmbr`, `id_info`, `gambar`, `ket`) VALUES
 (1, '1', 'info.jpg', ''),
 (2, '2', 'info.jpg', ''),
-(8, '11', '6211bd64cc749.jpg', '');
+(8, '11', '6211bd64cc749.jpg', ''),
+(9, '12', '6211bd64cc749.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -386,14 +395,14 @@ CREATE TABLE `tabel_member` (
 --
 
 INSERT INTO `tabel_member` (`id_user`, `kode_user`, `kd_toko`, `nm_user`, `email_user`, `alamat_user`, `password`, `pass_user`, `foto`, `hp`, `akses`, `stt_user`, `on`, `log`) VALUES
-(1, '1277869792', '123', 'admin', 'admin_ovent@gmail.com', '', 'e9af23dd5a45126ff689eba7bb2146bb', '123', 'admin.jpg', '', 'admin', '0', 0, '2022-06-20 08:57:11'),
-(6, '683077238', '', 'koko', 'admin@republicvisual.com', '', 'e9af23dd5a45126ff689eba7bb2146bb', '123', 'user.jpg', '085959188887', 'member', '0', 0, ''),
-(7, '222662633', '123', 'jatmiko', 'rock_id@ymail.com', 'malang', 'e9af23dd5a45126ff689eba7bb2146bb', '123', '', '', 'merchant', '0', 0, '2022-06-07 15:46:02'),
+(1, '1277869792', '123', 'admin', 'admin_ovent@gmail.com', '', 'e9af23dd5a45126ff689eba7bb2146bb', '123', 'admin.jpg', '', 'admin', '0', 0, '2022-07-06 13:17:56'),
+(6, '683077238', '', 'koko', 'admin@republicvisual.com', '', 'e9af23dd5a45126ff689eba7bb2146bb', '123', 'user.jpg', '085959188887', 'member', '0', 0, '2022-07-07 11:40:46'),
+(7, '222662633', '123', 'jatmiko', 'rock_id@ymail.com', 'malang', 'e9af23dd5a45126ff689eba7bb2146bb', '123', '', '', 'merchant', '0', 0, '2022-07-06 11:27:05'),
 (8, '1406561427', '123', 'republic', 'sablenkcoco@gmail.com', '', 'e9af23dd5a45126ff689eba7bb2146bb', '123', '', '', 'merchant', '0', 0, ''),
 (9, '1930579037', NULL, 'vikylorent', 'viky2311@gmail.com', 'pondok delta b.72', '3c2c33f3e8f2ecfcd6132a545583fa67', 'viky2311', '', '081393597900', 'member', '0', 0, ''),
 (10, '262550057', NULL, 'vik', 'vik@mail.com', 'pondok delta b.72', 'e9af23dd5a45126ff689eba7bb2146bb', '123', 'user.jpg', '082', 'member', '0', 0, '2022-06-20 08:44:56'),
 (12, '1953619785', NULL, 'yuda', 'tes1@yahoo.com', 'jalan jalan', 'e9af23dd5a45126ff689eba7bb2146bb', '123', '', '08987818123', 'member', '0', 0, '2022-06-16 22:54:53'),
-(13, '735556440', NULL, 'Danduk Sugiantoro', 'embuhraeruh6@gmail.com', 'Jln Veteran no 44 rt 1 rw 9 Dsn Selomamen Ds Purwokerto Kec Ngadiluwih Kab Kediri ', '45e5904c2755dbb09e76d5ea044eb0da', 'foliocolbus', '', '085867998171', 'merchant', 'PENDING', 0, ''),
+(13, '735556440', NULL, 'Danduk Sugiantoro', 'embuhraeruh6@gmail.com', 'Jln Veteran no 44 rt 1 rw 9 Dsn Selomamen Ds Purwokerto Kec Ngadiluwih Kab Kediri ', '45e5904c2755dbb09e76d5ea044eb0da', 'foliocolbus', '', '085867998171', 'merchant', 'PENDING', 0, '2022-07-06 10:56:22'),
 (14, '1969560250', NULL, 'fiky', 'fiky@gmail', 'malang', 'c011dc399156da70196b06d23d1d91a7', '12345678', '', '0987654321', 'member', '0', 0, '2022-06-04 19:22:34');
 
 -- --------------------------------------------------------
@@ -926,7 +935,9 @@ INSERT INTO `tabel_slide` (`id_slide`, `kat_slide`, `gbr_slide`, `judul_slide`, 
 (1, '1', 'slide-2.jpg', 'header', 'header'),
 (2, '1', 'slide-3.jpg', 'header', 'header'),
 (3, '2', 'slide-2.jpg', '', ''),
-(4, '2', 'slide-3.jpg', '', '');
+(4, '2', 'slide-3.jpg', '', ''),
+(5, '3', 'slide-index-1.png', '', ''),
+(6, '4', 'slide-index-2.png', '', '');
 
 -- --------------------------------------------------------
 
@@ -1177,6 +1188,8 @@ CREATE TABLE `tabel_toko` (
   `almt_toko` varchar(150) NOT NULL,
   `kota_toko` varchar(50) NOT NULL,
   `kecamatan_toko` varchar(50) NOT NULL,
+  `ket_toko` text NOT NULL,
+  `jargon_toko` varchar(255) NOT NULL,
   `tlp_toko` varchar(15) NOT NULL,
   `fax_toko` varchar(255) NOT NULL,
   `logo` varchar(50) NOT NULL,
@@ -1193,8 +1206,8 @@ CREATE TABLE `tabel_toko` (
 -- Dumping data untuk tabel `tabel_toko`
 --
 
-INSERT INTO `tabel_toko` (`kd_toko`, `nm_toko`, `almt_toko`, `kota_toko`, `kecamatan_toko`, `tlp_toko`, `fax_toko`, `logo`, `password`, `pass`, `status`, `tipe`, `headerfooter`, `background`, `tombol`) VALUES
-('123', 'SANTRIMART', 'Bandung', 'Bandung', 'Bandung', '6281234567890', '', 'logo.png', '757f9d5b09cfd69699c86364746ad68e', '123456', '', '', '#37E8FC', '#E6E6E6', '#FF9F43');
+INSERT INTO `tabel_toko` (`kd_toko`, `nm_toko`, `almt_toko`, `kota_toko`, `kecamatan_toko`, `ket_toko`, `jargon_toko`, `tlp_toko`, `fax_toko`, `logo`, `password`, `pass`, `status`, `tipe`, `headerfooter`, `background`, `tombol`) VALUES
+('123', 'SANTRIMART', 'Bandung', 'Bandung', 'Bandung', 'Belanja di santrimart banyak untungnya, dapatkan promo besar-besaran download sekarang juga aplikasi', 'Santri kekinian, Santri berwirausaha', '6281234567890', '', 'logo.png', '757f9d5b09cfd69699c86364746ad68e', '123456', '', '', '#37E8FC', '#E6E6E6', '#FF9F43');
 
 --
 -- Indexes for dumped tables
@@ -1382,7 +1395,7 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT untuk tabel `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=192;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_barang_gambar`
@@ -1400,19 +1413,19 @@ ALTER TABLE `tabel_comment`
 -- AUTO_INCREMENT untuk tabel `tabel_comment_barang`
 --
 ALTER TABLE `tabel_comment_barang`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_info`
 --
 ALTER TABLE `tabel_info`
-  MODIFY `id_info` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_info` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_info_gambar`
 --
 ALTER TABLE `tabel_info_gambar`
-  MODIFY `id_gmbr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_gmbr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_info_pembayaran`
@@ -1508,7 +1521,7 @@ ALTER TABLE `tabel_satuan_barang`
 -- AUTO_INCREMENT untuk tabel `tabel_slide`
 --
 ALTER TABLE `tabel_slide`
-  MODIFY `id_slide` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_slide` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_stok_toko`
