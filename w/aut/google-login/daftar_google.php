@@ -1,3 +1,8 @@
+<head>
+	<!-- SweetAlert -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 <?php
 
 include "../../inc/koneksi.php";
@@ -14,14 +19,15 @@ require 'function.php';
 
 if (isset($_POST["submit"])) {
     if (register($_POST) > 0) {
+        // echo "<script>alert('Login Berhasil Silahkan Lengkapi Data!');window.location= '../../page/?menu=home';</script>";
         echo '<script>
 				setTimeout(function() {
 					Swal.fire({
 						icon: "success",
 						tittle: "Berhasil Login",
-						text: "Anda Berhak Mengakses Halaman Beranda",
+						text: "Data Berhasil Di Lengkapi Silahkan Login Kembali!",
 					}).then(function() {
-						window.location = "../../page/?menu=home";
+						window.location = "../../aut/login.php";
 					});
 				}, 1);
 			</script>';
