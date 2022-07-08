@@ -249,9 +249,6 @@
                             <p class="text-justify font-medium-2">
                                 <ul class="list-group-flush text-left text-dark px-3">
                                     <li class="list-group-item bg-transparent px-0">
-                                        <!-- DUMMY DATA -->
-                                        <!-- <blockquote class="display-4 text-dark" style="font-size:2em">
-                                        <?= $ExplodeKonten[2] ?></blockquote> -->
                                         <h4>
                                             <?= $ket ?> 
                                             <strong>santrimart</strong>
@@ -354,8 +351,10 @@
                             </div>
                         </div>
 
-                        <!-- <?php $ExplodeKetentuan = explode(",", $a['ketentuan']);
-                        $lengthKetentuan = count($ExplodeKetentuan) ?> -->
+                        <?php 
+                        $ExplodeKetentuan   = explode(".", $a['tutor']);
+                        $lengthKetentuan    = count($ExplodeKetentuan) 
+                        ?>
                         <div class="col-lg-6 col-md-6 col-12">
                             <div class="card">
                                 <div class="card-header d-flex flex-column align-items-start py-0">
@@ -368,30 +367,11 @@
                                     </div>
                                     <h2 class="text-bold-700 mt-1 mb-25" style="padding-left:17.5px">Download APP</h2>
                                     <ul class="list-group-flush text-left text-dark pl-0">
-                                        <!-- DUMMY DATA -->
-                                        <!-- <?php for ($i = 0; $i < $lengthKetentuan; $i++) { ?>
-                                            <li class="list-group-item bg-transparent font-small-3">
+                                        <?php for ($i = 0; $i < $lengthKetentuan; $i++) { ?>
+                                            <li class="list-group-item bg-transparent font-small-4">
                                                 <?= $ExplodeKetentuan[$i] ?>
                                             </li>
-                                        <?php } ?> -->
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Login menggunakan akun kamu
-                                        </li>
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Pilih item belanja kamu
-                                        </li>
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Klik tombol pembelian
-                                        </li>
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Cek pesenan kamu
-                                        </li>
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Tambahkan alamat pengiriman
-                                        </li>
-                                        <li href="#" class="list-group-item bg-transparent font-small-4">
-                                            Pesanan siap diproses
-                                        </li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>
