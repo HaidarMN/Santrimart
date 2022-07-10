@@ -30,13 +30,13 @@ function lupapassword($data)
         $query = "UPDATE tabel_member SET
                     password = '$passmd',
                     pass_user = '$pass1'
-                WHERE email_user = $email";
+                WHERE email_user = '$email'";
 
-        
+       
         mysqli_query($koneksi, $query);
 
         // cek data 
-        // return mysqli_affected_rows($koneksi);
-        return 1;
+        return mysqli_affected_rows($koneksi);
+       
     }
 }
