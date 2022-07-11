@@ -159,7 +159,7 @@
                 <?php } ?>
 
                 <?php
-                $satQuery = "SELECT SUM(jumlah) as jumlah FROM tabel_rinci_penjualan ";
+                $satQuery = "SELECT SUM(jumlah) AS jumlah FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($count = mysqli_fetch_array($executeSat)) {
                     // print_r($count)
@@ -187,7 +187,7 @@
                 <?php } ?>
 
                 <?php
-                $satQuery = "SELECT SUM(jumlah), SUM(stok_awal) FROM tabel_rinci_penjualan ";
+                $satQuery = "SELECT SUM(jumlah), SUM(stok_awal) FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($count = mysqli_fetch_array($executeSat)) {
                     $countPersen = substr($count[0] / $count[1] * 100, 0, 4);
@@ -199,7 +199,7 @@
                         <div class="card-header d-flex flex-column align-items-start pb-0">
                             <div class="avatar bg-rgba-danger p-50 m-0">
                                 <div class="avatar-content">
-                                    <i class="fas fa-truck-loading font-medium-5"></i>
+                                    <i class="fas fa-truck-loading text-danger font-medium-5"></i>
                                 </div>
                             </div>
                             <h2 class="text-bold-700 mt-1"><?= $countPersen ?> %</h2>
@@ -217,9 +217,6 @@
 
         </section>
         <!-- // Statistics Card section end-->
-
-
-
 
     </div>
 </div>
