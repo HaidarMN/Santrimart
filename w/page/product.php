@@ -98,7 +98,8 @@
                 </div>
               </div>
               <!-- <button type="button" onclick="pilihVarian();"></button> -->
-              <!-- <div class="row">
+              <?php if ($_SESSION['akses'] == 'admin') { ?>
+              <div class="row">
                 <div class="col-4 col-md-4">
                   <div class="font-small-2 mt-1 mb-1">
                     Kategori <a href="#" class="badge badge-dark" data-toggle="modal" data-target="#kategori-modal">
@@ -147,7 +148,8 @@
                     <?php } ?>
                   </select>
                 </div>
-              </div> -->
+              </div>
+              <?php } ?>
 
               <!-- varian         -->
               <div class="row mt-2" id="varian">
