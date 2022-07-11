@@ -31,6 +31,24 @@
         <div class="content-detached content-right">
             <div class="content-body row">
 
+                <!-- TOOGLE -->
+                <section id="ecommerce-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="ecommerce-header-items">
+                                <div class="result-toggler">
+                                    <button class="navbar-toggler shop-sidebar-toggler" type="button"
+                                        data-toggle="collapse">
+                                        <span class="navbar-toggler-icon d-block d-lg-none"><i
+                                                class="feather icon-menu"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="shop-content-overlay"></div>
+
                 <!-- MAIN CONTENT -->
                 <section id="basic-examples">
                     <div class="row match-height">
