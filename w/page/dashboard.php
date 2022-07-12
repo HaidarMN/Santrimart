@@ -159,7 +159,7 @@
                 <?php } ?>
 
                 <?php
-                $satQuery = "SELECT SUM(jumlah) AS jumlah FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
+                $satQuery   = "SELECT SUM(jumlah) AS jumlah FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($count = mysqli_fetch_array($executeSat)) {
                     // print_r($count)
@@ -187,7 +187,7 @@
                 <?php } ?>
 
                 <?php
-                $satQuery = "SELECT SUM(jumlah), SUM(stok_awal) FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
+                $satQuery   = "SELECT SUM(jumlah), SUM(stok_awal) FROM tabel_rinci_penjualan,tabel_barang WHERE tabel_rinci_penjualan.kd_barang = tabel_barang.kd_barang AND tabel_barang.kd_merchant = $_SESSION[id_user]";
                 $executeSat = mysqli_query($koneksi, $satQuery);
                 while ($count = mysqli_fetch_array($executeSat)) {
                     $countPersen = substr($count[0] / $count[1] * 100, 0, 4);

@@ -126,10 +126,7 @@ $(window).on("load", function(){
                 stops: [0, 80, 100]
             }
         },
-        series: [{
-            name: 'Revenue',
-            data: [350, 275, 400, 300, 350, 300, 450]
-        }],
+        series: [],
 
         xaxis: {
           labels: {
@@ -156,6 +153,14 @@ $(window).on("load", function(){
     );
 
     revenueChart.render();
+    
+    var revenueMerchant = "w/AJAX/get-revenue.php";
+    $.getJSON(revenueMerchant, function(response) {
+        revenueChart.updateSeries([{
+            name: 'Revenue',
+            data: response
+        }])
+    })
 
 
     // Quaterly Sales Chart
